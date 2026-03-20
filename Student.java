@@ -1,18 +1,32 @@
-class Student 
-{
-	String name="vishnu";
-	int age=21;
-	
-	public String toString(){
-	 
-	  return "Student{name='"+name+"',age="+age+"}";
-}
- 
-	public static void main(String[] args)
-	{
-		Student s= new Student();
-		
-		System.out.print(s.toString());
-	}
-}
+class Student {
+    String name;
+    int age;
 
+    Student() {
+        name = "Unknown";
+        age = 0;
+    }
+
+    Student(String n) {
+        name = n;
+    }
+
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student("Rahul");
+        Student s3 = new Student("Amit", 20);
+
+        s1.display();
+        s2.display();
+        s3.display();
+    }
+}
